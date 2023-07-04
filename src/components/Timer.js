@@ -9,7 +9,6 @@ export const Timer = () => {
     const [stopped,setStopped] = useState(false)
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
-   // const deadline = "December, 31, 2023";
    const style={fontSize:"153px",textAlign:"center",marginTop:"15%"}
    const timerstyle={textAlign:"center"}
    const buttonstyle={margin:"1%",padding:"10px",width:"5%"}
