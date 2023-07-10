@@ -30,13 +30,20 @@ export const Timer = () => {
      setStopped(false)
    }
 
+   const getTime = () => {
+    const time = Date.now();
+
+    setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+    setMinutes(Math.floor((time / 1000 / 60) % 60));
+    setSeconds(Math.floor((time / 1000) % 60));
+  };
+
   useEffect(() => {
-   // setInterval(() => setSeconds(seconds+1), 1000);
-  // setSeconds(seconds+1)
-  //console.log(start)
+  
   let interval
   if(start){
-     interval = setInterval(() =>{ 
+     interval = setInterval(() =>{
+           
             setSeconds(seconds+1)
             if(seconds == 59){
               setMinutes(minutes+1)
